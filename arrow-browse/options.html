@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Test Extension Options</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+</head>
+
+<body>
+  <label>Element to attempt click on?</label>
+  <select id="elements">
+   <option value="links">links</option>
+   <option value="buttons">buttons</option>
+  </select>
+  <br/>
+  <label>Turn Arrow Browse Off?
+    <input type="checkbox" id="offSwitch">
+  </label>
+
+  <div id="saveStatus"></div>
+  <button id="save">Save</button>
+
+  <script src="options.js"></script>
+</body>
+</html>

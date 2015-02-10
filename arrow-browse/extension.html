@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Arrow Browse</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        padding:5px;
+      }
+      div {
+        /* avoid an excessively wide status text */
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 350px;
+      }
+      .results{
+        border-bottom:1px solid grey;
+        margin-bottom:10px;
+        padding-bottom:5px;
+      }
+      dl{margin:0;}
+      span{}
+      label {
+        display:block;
+        margin:3px 0;
+      }
+      span {
+        font-size: 24px;
+        font-weight:200;
+        position: relative;
+        top: -12px;
+        right: -9px;
+      }
+      button {
+        margin-left:40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><img src="arrow-icon-lg.png"><span>Arrow Browse<span></header>
+    <section class="results" id="arrowStatus">
+      <dl>
+        <dt>Next</dt>
+        <dd></dd>
+        <dt>Previous</dt>
+        <dd></dd>
+      </dl>
+    </section>
+    <section id="options">
+      <label>Element to attempt click on?</label>
+      <select id="elements">
+        <option value="links">links</option>
+        <option value="buttons">buttons</option>
+      </select>
+      <br/>
+      <label>Turn Arrow Browse Off?
+        <input type="checkbox" id="offSwitch">
+      </label>
+      <div id="saveStatus"></div>
+      <button id="save">Save</button>
+    </section>
+    <script src="extension.js"></script>
+  </body>
+</html>
+
